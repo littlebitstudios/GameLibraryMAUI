@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GameLibraryMAUI.MainPage"
+             Title="LittleBit's Game Library">
+
+    <VerticalStackLayout VerticalOptions="Fill" HorizontalOptions="Fill">
+        <Label Text="Saved Games"/>
+        <Picker x:Name="GamePicker" HorizontalOptions="Fill" SelectedIndexChanged="PickedGameChange"/>
+
+        <Label Text="File Name"/>
+        <Entry x:Name="FileName" HorizontalOptions="Fill"/>
+
+        <Label Text="Title"/>
+        <Entry x:Name="TitleEntry" HorizontalOptions="Fill"/>
+
+        <Label Text="Developer"/>
+        <Entry x:Name="DevEntry" HorizontalOptions="Fill"/>
+
+        <Label Text="Description"/>
+        <Editor x:Name="DescEditor" HorizontalOptions="Fill" HeightRequest="120"/>
+
+        <Label Text="Genre"/>
+        <Entry x:Name="GenreEntry" HorizontalOptions="Fill"/>
+
+        <HorizontalStackLayout Margin="0,20,0,0" HorizontalOptions="Fill" VerticalOptions="End" Spacing="10">
+            <Button Text="Clear" Clicked="ClearClicked"/>
+            <Button Text="Save" Clicked="SaveClicked"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+
+</ContentPage>
